@@ -6,6 +6,7 @@
 *
 * @xp: Pointer to the first integer
 * @yp: Pointer to the second integer
+* Return: nothing
 */
 void swap(int *xp, int *yp)
 {
@@ -20,10 +21,11 @@ int temp = *xp;
 *
 * @array: The array to be sorted
 * @size: Number of elements in the array
+* Return: nothing.
 */
 void bubble_sort(int *array, size_t size)
 {
-size_t i, j;
+unsigned int i, j;
 
 if (array == NULL || size <= 0)
 return;
@@ -40,6 +42,5 @@ swap(&array[j], &array[j + 1]);
 print_array(array, size);
 }
 }
-
 }
 }
