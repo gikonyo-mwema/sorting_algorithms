@@ -30,4 +30,8 @@ void quick_sort(int *array, size_t size);
 
 /** Helper Function prototypes **/
 void swap(int *xp, int *yp);
+void swapping(int *xp, int *yp, int *array, size_t size);
+void quick_sort_helper(int array[], int low, int high, size_t size);
+int partition(int array[], int low, int high, size_t size);
+void swapped(int* a, int* b, int *array, size_t size);
 #endif 
