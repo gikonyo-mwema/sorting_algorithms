@@ -1,5 +1,5 @@
 #include "sort.h"
-#include <stdbool.h>
+
 
 /**
 * swap - Swaps the values of two integers
@@ -11,6 +11,7 @@
 void swap(int *xp, int *yp)
 {
 int temp = *xp;
+
 *xp = *yp;
 *yp = temp;
 }
@@ -26,14 +27,15 @@ int temp = *xp;
 void bubble_sort(int *array, size_t size)
 {
 unsigned int i, j;
+size_t len = size;
 
-if (array == NULL || size <= 0)
+if (array == NULL || size < 2)
 return;
 
-for (i = 0; i < size - 1; i++)
+for (i = 0; i < len - 1; i++)
 {
 
-for (j = 0; j < size - 1; j++)
+for (j = 0; j < len - 1; j++)
 {
 
 if (array[j] > array[j + 1])
@@ -42,5 +44,6 @@ swap(&array[j], &array[j + 1]);
 print_array(array, size);
 }
 }
+len--;
 }
 }
