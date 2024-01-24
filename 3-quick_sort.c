@@ -78,5 +78,8 @@ quick_sort_helper(array, pi + 1, high, size);
 */
 void quick_sort(int array[], size_t size)
 {
+if (array == NULL || size < 2)
+return;
+
 quick_sort_helper(array, 0, size - 1, size);
 }
